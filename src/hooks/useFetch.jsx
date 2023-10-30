@@ -41,7 +41,7 @@ const useFetch = () => {
       },
       body: JSON.stringify(rooms), // Convierte los datos a formato JSON
     };
-    const response = await fetch('http://localhost/api/admin-hotels/add-rooms', requestOptions);
+    const response = await fetch(`${import.meta.env.VITE_URL_API}/admin-hotels/add-rooms`, requestOptions);
     const data = await response.json();
     return data;
   }
