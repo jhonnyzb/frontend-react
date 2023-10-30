@@ -73,7 +73,7 @@ const FormAddRooms = () => {
                 </Form.Select>
             </Form.Group>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Button variant="primary" type="submit" disabled={loading}>
+                <Button variant="success" type="submit" disabled={loading}>
                     {!loading ? 'Enviar' : <Spinner size='sm' animation="border" />}
                 </Button>
             </div>

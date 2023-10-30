@@ -19,9 +19,10 @@ const TableData = () => {
 
     return (
         <>
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom:'15px' }}>
                 <Button variant='success' onClick={() => handle('Crear Hotel')} >Crear Hotel</Button>
             </div>
+            <br />
             <Table striped hover responsive>
                 <thead>
                     <tr style={{ textAlign: 'center' }}>

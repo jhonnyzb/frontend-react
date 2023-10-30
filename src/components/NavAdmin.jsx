@@ -2,21 +2,16 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 
 const NavAdmin = () => {
     return (
         <>
-            <Container>
-                <Navbar bg="primary" data-bs-theme="dark">
-                    <div style={{marginLeft: '12px'}}>
-                        <Navbar.Brand href="/">Admin</Navbar.Brand>
-                    </div>
-                    <Nav className="ms-auto">
-                        <Nav.Link href="#pricing">Salir</Nav.Link>
-                    </Nav>
-                </Navbar>
-            </Container>
+            <div style={{ backgroundColor: '#4E6B86', display: 'flex', justifyContent: 'space-around', padding: '20px', borderRadius: '10px' }}>
+                <p style={{fontSize:'30px', fontWeight:'bold', color: '#ffffff'}}>ADMIN</p>
+                <Link  to='/' style={{fontSize:'30px', fontWeight:'bold', color: '#ffffff'}}>SALIR</Link>
+            </div>
         </>
     )
 }

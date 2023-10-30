@@ -3,13 +3,13 @@ import React, { useContext } from 'react'
 const useFetch = () => {
 
   const fetchData = async () => {
-    const response = await fetch('https://backend-laravel-production-3624.up.railway.app/api/admin-hotels/hotels');
+    const response = await fetch(`${import.meta.env.VITE_URL_API}/admin-hotels/hotels`);
     const data = await response.json();
     return data;
   }
 
   const fetchTypes = async () => {
-    const response = await fetch('https://backend-laravel-production-3624.up.railway.app/api/admin-hotels/get-types-accommodation');
+    const response = await fetch(`${import.meta.env.VITE_URL_API}/admin-hotels/get-types-accommodation`);
     const data = await response.json();
     return data;
   }
@@ -22,7 +22,7 @@ const useFetch = () => {
       },
       body: JSON.stringify(hotel), // Convierte los datos a formato JSON
     };
-    const response = await fetch('https://backend-laravel-production-3624.up.railway.app/api/admin-hotels/create-hotel', requestOptions);
+    const response = await fetch(`${import.meta.env.VITE_URL_API}/admin-hotels/create-hotel`, requestOptions);
     const data = await response.json();
     return data;
   }

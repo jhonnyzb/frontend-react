@@ -14,9 +14,10 @@ const Dialog = ({ children, title = 'Crear Hotel' }) => {
             size='lg'
             show={show}
             onHide={() => ShowSet(false)}
+            centered
         >
-            <Modal.Header closeButton>
-                <Modal.Title>{title}</Modal.Title>
+            <Modal.Header closeButton style={{backgroundColor:'#4E6B86'}}>
+                <Modal.Title style={{color:'white'}}>{title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 {children}
